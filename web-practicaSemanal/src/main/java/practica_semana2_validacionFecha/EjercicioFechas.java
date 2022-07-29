@@ -16,10 +16,10 @@ public class EjercicioFechas {
 		System.out.println(" Ingrese el mes: ");
 		int mes = teclado.nextInt(); 
 		
-		System.out.println(" Ingrese el año: ");
-		int año = teclado.nextInt(); 
+		System.out.println(" Ingrese el aï¿½o: ");
+		int aÃ±o = teclado.nextInt(); 
 		
-if(año >= 1900 && año <= 2099) {System.out.println(" Año correcto");
+if(aÃ±o  >= 1900 && aÃ±o <= 2099) {System.out.println(" Aï¿½o correcto");
 		
 		if(mes >= 1 && mes <= 12) 
 		 {
@@ -27,7 +27,7 @@ if(año >= 1900 && año <= 2099) {System.out.println(" Año correcto");
 		  { System.out.println(" Mes correcto");
 
 
-		  if ((mes == 2 && dia >= 1 && dia <= 29 && año % 4 == 0) && (año % 100 != 0 || año % 400 == 0))
+		  if ((mes == 2 && dia >= 1 && dia <= 29 && aÃ±o % 4 == 0) && (aÃ±o % 100 != 0 || aÃ±o % 400 == 0))
 			 {System.out.println(" Dia correcto");
 			
 			 } else if(mes == 2 && dia >= 1 && dia <= 28)
@@ -47,7 +47,7 @@ if(año >= 1900 && año <= 2099) {System.out.println(" Año correcto");
 		teclado.close();
 			        }
 			        else {System.out.println(" Mes incorrecto");}
-  		            }else {System.out.println(" Año incorrecto");}
+  		            }else {System.out.println(" Aï¿½o incorrecto");}
 		System.out.println("Fin");
 	        }
 }

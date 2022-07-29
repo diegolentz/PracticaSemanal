@@ -1,8 +1,7 @@
-package ar.com.PracticaSemanal.web.controllers;
+package Controllers;
 
 import java.io.IOException;
 import java.util.Collection;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,30 +13,23 @@ import ar.com.PracticaSemanal.services.ArticulosService;
 import ar.com.PracticaSemanal.services.exceptions.ServiceException;
 import ar.com.PracticaSemanal.services.impl.ArticulosServiceImpl;
 
-@WebServlet("/controller/AltaFormularioServlet")
-public class AltaFormularioServlet extends HttpServlet {
+@WebServlet("/controllers/Menu")
+public class Menu extends HttpServlet {
 
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 4960537621212213518L;
+	private static final long serialVersionUID = -1735765050480723371L;
 
-	//GET
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		
-		String fecha = request.getParameter("fecha");//> String
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 		ArticulosService ar = new ArticulosServiceImpl();
 		try {
 			Collection<Articulo> list = ar.findAll();			
 			request.setAttribute("articulos", list);
 			//OK
-			getServletContext().getRequestDispatcher("/registroOk.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/listado.jsp").forward(request, response);
 		} catch (ServiceException e) {
 			//FAIL
-			getServletContext().getRequestDispatcher("/registroFail.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
 		}
-		
+	
 	}
 }

@@ -1,5 +1,5 @@
 
-package ar.com.PracticaSemanal.web.controllers;
+package Controllers;
 
 import ar.com.PracticaSemanal.domain.Articulo;
 import ar.com.PracticaSemanal.services.ArticulosService;

@@ -1,5 +1,5 @@
 
-package ar.com.PracticaSemanal.web.controllers;
+package Controllers;
 
 import java.util.Scanner;
 
